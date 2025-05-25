@@ -14,8 +14,8 @@ export default function ProjectModal({ project, onClose }) {
         <div>
           <strong>기간:</strong> {project.start} ~ {project.end}
         </div>
-        <div>
-          <strong>Tech:</strong> {project.tech && project.tech.join(', ')}
+        <div style={{whiteSpace: 'pre'}}>
+          <strong>Tech:</strong> {project.tech && project.tech.join('   ')}
         </div>
         <div>
           <strong>My Work:</strong>

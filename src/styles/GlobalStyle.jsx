@@ -30,10 +30,10 @@ const GlobalStyle = createGlobalStyle`
       135deg,
       rgba(240, 244, 250, 1) 0%,
       rgba(224, 232, 242, 1) 50%, 
-      rgb(164, 181, 199) 100% 
+      rgb(149, 174, 201) 100% 
     );
     background-size: 300% 300%;
-    animation: floatGradient 20s ease infinite;
+    animation: floatGradient 4s ease infinite;
     
   }
 `;

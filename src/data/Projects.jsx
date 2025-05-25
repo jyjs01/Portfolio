@@ -21,7 +21,7 @@ export const projects = [
                 "Naver Search API",
                 "coolSMS"
             ],
-        work: ["UI/UX 디자인", "React Native 기반 화면 구현"],
+        work: ["UI/UX 디자인", "React Native 기반 화면 구현", "Naver Maps API 연동", "Spring 서버 API 연동"],
         source: "https://github.com/Course-Plate/CP_Final",
     },
 
@@ -37,7 +37,7 @@ export const projects = [
                 "MySQL",
                 "Google Books API"
             ],
-        work: ["UI/UX 디자인", "React 기반 화면 구현", "Node.js 서버 구성 및 API 구현"],
+        work: ["UI/UX 디자인", "React 기반 화면 구현", "Node.js 서버 구성, API 구현 및 연동"],
         source: "https://github.com/jyjs01/Interactive_Reading_Club",
     },
 
@@ -55,7 +55,7 @@ export const projects = [
                 "Firebase Cloud Messaging(추가 개선 필요)",
                 "Hugging Face API"
             ],
-        work: ["UI/UX 디자인", "Android(Java) 기반 화면 구현", "Node.js 서버 구성 및 API 구현"],
+        work: ["UI/UX 디자인", "Android(Java) 기반 화면 구현", "Node.js 서버 구성, API 구현 및 연동"],
         source: "https://github.com/jyjs01/Notice-Counsel",
     },
 
