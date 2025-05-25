@@ -7,11 +7,13 @@ export const Card = styled.div`
   overflow:hidden; 
   transition:transform .3s,box-shadow .3s;
   max-width:350px; 
-  width:100%; margin:0 auto;
+  width:100%; 
+  margin:0 auto;
 
   &:hover {
     transform: translateY(-10px);
     box-shadow:0 10px 20px rgba(0,0,0,0.2);
+    cursor: pointer;
   }
 
   img { 
@@ -21,4 +23,10 @@ export const Card = styled.div`
   }
     
   .content { padding:1rem; }
+
+  p {
+    margin: 0 1rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
 `;

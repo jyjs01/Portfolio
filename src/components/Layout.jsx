@@ -1,16 +1,26 @@
+import React, { useState } from 'react';
 import Header from './Header';
 import { Main, Section, AboutWrapper, ProfileImage, InfoList, InfoItem, SocialLinks, Grid } from '../styles/LayoutStyle';
 import ProjectCard from './ProjectCard';
 import { FaUser, FaBirthdayCake, FaHome, FaEnvelope, FaGraduationCap, FaGithub, FaBlogger } from 'react-icons/fa';
+import { projects } from '../data/Projects';
 import profileImage from '../assets/profile.jpg';
+import ProjectModal from './ProjectModal';
 
 export default function Layout() {
+
+  const [modalProject, setModalProject] = useState(null);
+
+  const handleOpenModal = (project) => setModalProject(project);
+  const handleCloseModal = () => setModalProject(null);
+
   return (
     <>
       <Header />
       <Main>
         <Section id="home" bg="rgba(255,255,255,0.9)">
           <h2>염재영</h2>
+          <br />
           <p style={{ fontSize: 20, lineHeight: 1.8 }}>
             사용자 중심의 직관적인 UI/UX를 설계하고 구현하는 것을 즐기는 프론트엔드 개발자입니다.<br />
             React와 React Native를 활용해 효율적인 인터페이스를 구축하며,<br />
@@ -22,6 +32,7 @@ export default function Layout() {
 
         <Section id="about" bg="rgba(255,255,255,0.8)">
           <h2>ABOUT</h2>
+          <br />
           <AboutWrapper>
             <ProfileImage src={profileImage} alt="Profile" />
             <div>
@@ -34,35 +45,18 @@ export default function Layout() {
               </InfoList>
               <SocialLinks>
                 <a href="https://github.com/jyjs01" target="_blank" rel="noreferrer"><FaGithub /> Git</a>
-                <a href="https://blog.example.com" target="_blank" rel="noreferrer"><FaBlogger /> BLOG</a>
               </SocialLinks>
             </div>
           </AboutWrapper>
         </Section>
 
         <Section id="projects" bg="rgba(255,255,255,0.8)">
-          <h2>프로젝트</h2>
+          <h2>Projects</h2>
+          <br />
           <Grid>
-            <ProjectCard
-              title="CoursePlate"
-              description="사용자의 여행 지역과 음식 취향을 기반으로 음식점을 추천하는 모바일 애플리케이션 (React Native 기반)"
-              image="/project1.jpg"
-            />
-            <ProjectCard
-              title="Interactive Reading Club"
-              description="책 추천 및 독서 클럽 커뮤니티 웹 서비스 (React + Node.js + MySQL)"
-              image="/project2.jpg"
-            />
-            <ProjectCard
-              title="Notice Counsel"
-              description="모바일 기반 학사 상담 예약 및 공지 관리 앱 (Android Studio + Node.js)"
-              image="/project3.jpg"
-            />
-            <ProjectCard
-              title="ConnectHub"
-              description="시각장애인을 위한 커뮤니티 플랫폼 (React 기반 웹서비스)"
-              image="/project4.jpg"
-            />
+            {projects.map((project, idx) => (
+                <ProjectCard project={project} key={project.title + idx} onOpenModal={handleOpenModal} />
+            ))}
           </Grid>
         </Section>
 
@@ -74,6 +68,13 @@ export default function Layout() {
           </p>
         </Section>
       </Main>
+
+      {modalProject && (
+        <ProjectModal
+          project={modalProject}
+          onClose={handleCloseModal}
+        />
+      )}
     </>
   );
 }

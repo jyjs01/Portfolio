@@ -21,7 +21,7 @@ export default function Header() {
 
   return (
     <HeaderWrapper scrolled={scrolled}>
-      <Title>JY</Title>
+      <Title>JY's Portfolio</Title>
       <Nav>
         <a onClick={() => scrollTo('home')}>Home</a>
         <a onClick={() => scrollTo('about')}>About</a>
