@@ -44,7 +44,7 @@ export default function Layout() {
                 <InfoItem><FaGraduationCap /> 선문대학교 컴퓨터공학부 </InfoItem>
               </InfoList>
               <SocialLinks>
-                <a href="https://github.com/jyjs01" target="_blank" rel="noreferrer"><FaGithub /> Git</a>
+                <a href="https://github.com/jyjs01" target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
               </SocialLinks>
             </div>
           </AboutWrapper>

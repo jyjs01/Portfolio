@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Main = styled.main`
-  margin-top: 6rem;
+  margin-top: 10rem;
   padding: clamp(1rem, 4vw, 2rem);
   max-width: 1024px;
   width: 100%;

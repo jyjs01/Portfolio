@@ -14,9 +14,19 @@ export default function ProjectModal({ project, onClose }) {
         <div>
           <strong>기간:</strong> {project.start} ~ {project.end}
         </div>
-        <div style={{whiteSpace: 'pre'}}>
-          <strong>Tech:</strong> {project.tech && project.tech.join('   ')}
+        <div>
+          <strong>Tech:</strong>{" "}
+          {project.tech &&
+            project.tech.map((tech, idx) => (
+              <span
+                key={tech}
+                style={{ marginRight: idx !== project.tech.length - 1 ? "1em" : 0 }}
+              >
+                {tech}
+              </span>
+            ))}
         </div>
+
         <div>
           <strong>My Work:</strong>
           <ul>
