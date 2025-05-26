@@ -26,6 +26,7 @@ export default function Header() {
         <a onClick={() => scrollTo('home')}>Home</a>
         <a onClick={() => scrollTo('about')}>About</a>
         <a onClick={() => scrollTo('projects')}>Projects</a>
+        <a onClick={() => scrollTo('skills')}>Skills</a>
         <a onClick={() => scrollTo('contact')}>Contact</a>
       </Nav>
     </HeaderWrapper>

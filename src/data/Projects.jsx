@@ -1,13 +1,10 @@
 import profileImage from '../assets/profile.jpg';
-import IRCImage from '../assets/IRC.png';
-import NoticeCounselImage from '../assets/NoticeCounsel.png';
-import CoursePlateImage from '../assets/CoursePlate.png';
-import ConnectHubImage from '../assets/ConnectHub.png';
+import { projectImages } from './Images.jsx';
 
 export const projects = [
     {
         title: "CoursePlate",
-        image: CoursePlateImage,
+        image: projectImages.coursePlate,
         detail: "사용자의 여행 지역과 음식 취향을 기반으로 음식점을 추천하는 모바일 앱",
         start: "2025.03.04",
         end: "2025.06.10",
@@ -27,7 +24,7 @@ export const projects = [
 
     {
         title: "Interactive Reading Club",
-        image: IRCImage,
+        image: projectImages.irc,
         detail: "책 추천 및 독서 클럽 커뮤니티 웹 서비스",
         start: "2024.07.15",
         end: "2024.08.18",
@@ -43,7 +40,7 @@ export const projects = [
 
     {
         title: "Notice Counsel",
-        image: NoticeCounselImage,
+        image: projectImages.noticeCounsel,
         detail: "모바일 기반 학사 상담 예약 및 공지 관리 앱",
         start: "2024.09.02",
         end: "2024.12.16",
@@ -61,7 +58,7 @@ export const projects = [
 
     {
         title: "ConnectHub",
-        image: ConnectHubImage,
+        image: projectImages.connectHub,
         detail: "시각장애인을 위한 커뮤니티 플랫폼",
         start: "2024.04.22",
         end: "2024.06.14",

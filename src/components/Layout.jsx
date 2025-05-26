@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Header from './Header';
-import { Main, Section, AboutWrapper, ProfileImage, InfoList, InfoItem, SocialLinks, Grid } from '../styles/LayoutStyle';
+import { Main, Section, AboutWrapper, ProfileImage, InfoList, InfoItem, SocialLinks, Grid, SkillsGrid } from '../styles/LayoutStyle';
 import ProjectCard from './ProjectCard';
-import { FaUser, FaBirthdayCake, FaHome, FaEnvelope, FaGraduationCap, FaGithub, FaBlogger } from 'react-icons/fa';
+import { FaUser, FaBirthdayCake, FaHome, FaEnvelope, FaGraduationCap, FaGithub } from 'react-icons/fa';
 import { projects } from '../data/Projects';
+import { skills } from '../data/Skills';
 import profileImage from '../assets/profile.jpg';
 import ProjectModal from './ProjectModal';
 
@@ -18,7 +19,7 @@ export default function Layout() {
     <>
       <Header />
       <Main>
-        <Section id="home" bg="rgba(255,255,255,0.9)">
+        <Section id="home">
           <h2>염재영</h2>
           <br />
           <p style={{ fontSize: 20, lineHeight: 1.8 }}>
@@ -30,7 +31,7 @@ export default function Layout() {
           </p>
         </Section>
 
-        <Section id="about" bg="rgba(255,255,255,0.8)">
+        <Section id="about">
           <h2>ABOUT</h2>
           <br />
           <AboutWrapper>
@@ -43,6 +44,7 @@ export default function Layout() {
                 <InfoItem><FaEnvelope /> duawodud12@naver.com </InfoItem>
                 <InfoItem><FaGraduationCap /> 선문대학교 컴퓨터공학부 </InfoItem>
               </InfoList>
+              <br />
               <SocialLinks>
                 <a href="https://github.com/jyjs01" target="_blank" rel="noreferrer"><FaGithub /> GitHub</a>
               </SocialLinks>
@@ -50,8 +52,8 @@ export default function Layout() {
           </AboutWrapper>
         </Section>
 
-        <Section id="projects" bg="rgba(255,255,255,0.8)">
-          <h2>Projects</h2>
+        <Section id="projects">
+          <h2>PROJECTS</h2>
           <br />
           <Grid>
             {projects.map((project, idx) => (
@@ -60,8 +62,24 @@ export default function Layout() {
           </Grid>
         </Section>
 
-        <Section id="contact" bg="rgba(255,255,255,0.8)">
-          <h2>Contact</h2>
+        <Section id="skills">
+          <h2>SKILLS</h2>
+          <br />
+          <SkillsGrid>
+            {skills.map(skill => (
+              <div className="skill-item" key={skill.name}>
+                <div className="icon-name-box">
+                  <div className="skill-icon">{skill.icon}</div>
+                  <span className="skill-name">{skill.name}</span>
+                </div>
+                <span className="skill-desc">{skill.desc}</span>
+              </div>
+            ))}
+          </SkillsGrid>
+        </Section>
+
+        <Section id="contact">
+          <h2>CONTACT</h2>
           <p>
             Email: duawodud12@naver.com<br />
             GitHub: <a href="https://github.com/jyjs01" target="_blank" rel="noreferrer">https://github.com/jyjs01</a>
