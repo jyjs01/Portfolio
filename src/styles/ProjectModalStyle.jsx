@@ -37,6 +37,13 @@ export const ModalBox = styled.div`
     100% { transform: scale(1) translateY(0);      opacity: 1; }
   }
 
+  @media (max-width: 600px) {
+    padding: 1rem 0.3rem 1.3rem 0.3rem;
+    max-width: 100vw;
+    max-height: 100vh;
+    border-radius: 12px;
+  }
+
   .image {
     background: #f4f6fa;
     min-width: 460px;
@@ -46,6 +53,13 @@ export const ModalBox = styled.div`
     object-fit: contain;
     margin: 0 auto 1rem auto;
     display: block;
+
+     @media (max-width: 600px) {
+      min-width: 0;
+      min-height: 0;
+      max-width: 95vw;
+      max-height: 35vh;
+    }
   }
 
   h2 {
