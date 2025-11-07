@@ -23,7 +23,7 @@ export default function Layout() {
           <h2>염재영</h2>
           <br />
           <p style={{ fontSize: 20, lineHeight: 1.8 }}>
-            사용자 중심의 직관적인 UI/UX를 설계하고 구현하는 것을 즐기는 프론트엔드 개발자입니다.<br />
+            사용자 중심의 직관적인 UI/UX를 설계하고 구현하는 것을 즐기는 개발자입니다.<br />
             React와 React Native를 활용해 효율적인 인터페이스를 구축하며,<br />
             백엔드와의 데이터 연동 및 API 최적화에도 관심을 가지고 있습니다.<br />
             새로운 기술을 학습하여 적용하고, 성능 최적화와 유지보수를 고려한<br />
