@@ -57,23 +57,6 @@ export const projects = [
     },
 
     {
-        title: "ConnectHub",
-        image: projectImages.connectHub,
-        detail: "시각장애인을 위한 커뮤니티 플랫폼",
-        start: "2024.04.22",
-        end: "2024.06.14",
-        tech: ["JavaScript", 
-                "React",
-                "TTS/STT",
-                "Node.js",
-                "MySQL",
-                "Twilio"
-            ],
-        work: ["UI/UX 디자인", "React 기반 화면 구현"],
-        source: "https://github.com/pkun2/ConnectHub",
-    },
-
-    {
         title: "Portfolio",
         image: profileImage,
         detail: "포트폴리오 페이지",
